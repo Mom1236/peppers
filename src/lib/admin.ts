@@ -1,6 +1,6 @@
 import { getLS, setLS } from "@/lib/storage";
 import type { Order, OrderStatus } from "@/lib/orders";
-import { getAllAffiliates as _getAllAffiliates, markAffiliatePaid } from "@/lib/affiliate-admin";
+import { getAllAffiliates, markAffiliatePaid } from "@/lib/affiliate-admin";
 
 const ORD_KEY = "axiom_orders_v1";
 
@@ -26,10 +26,4 @@ export function setOrderTracking(orderNumber: string, trackingNumber: string) {
   }
 }
 
-export function getAllAffiliates() {
-  return _getAllAffiliates().map((a) => a);
-}
-
-export function markCommissionPaid(affiliateId: string) {
-  markAffiliatePaid(affiliateId);
-}
+export { getAllAffiliates, markAffiliatePaid };
