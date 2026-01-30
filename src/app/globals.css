@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --axiom-light: #31a0d3;
+  --axiom-deep: #134586;
+  --axiom-white: #ffffff;
+  --axiom-gray: #e5e7eb;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: #0b1220;
+  background: linear-gradient(180deg, rgba(49,160,211,0.08) 0%, rgba(255,255,255,1) 55%, rgba(19,69,134,0.06) 100%);
+}
+
+::selection {
+  background: rgba(49,160,211,0.25);
+}
